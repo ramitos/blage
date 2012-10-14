@@ -1,0 +1,27 @@
+{
+  "name": "blage",
+  "version": "0.0.1",
+  "description": "http module middleware",
+  "main": "blaje.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "request": "2.11.x",
+    "specced": "0.0.x",
+    "async": "0.1.x"
+  },
+  "scripts": {
+    "test": "node test/runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ramitos/blage.git"
+  },
+  "keywords": [
+    "http",
+    "middleware"
+  ],
+  "author": "Sérgio Ramos <mail@sergioramos.me>",
+  "license": "FreeBSD"
+}
