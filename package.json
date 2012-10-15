@@ -1,6 +1,6 @@
 {
   "name": "blage",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "http module middleware",
   "main": "blage.js",
   "directories": {
@@ -23,5 +23,5 @@
     "middleware"
   ],
   "author": "Sérgio Ramos <mail@sergioramos.me>",
-  "license": "FreeBSD"
+  "license": "MIT"
 }
