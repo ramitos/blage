@@ -1,6 +1,6 @@
 {
   "name": "blage",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "http module middleware",
   "main": "blage.js",
   "directories": {
