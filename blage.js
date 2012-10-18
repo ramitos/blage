@@ -1,21 +1,19 @@
-var notfound = function (req, res, next) {
+module.exports = function () {
+  var stack = Array.prototype.slice.call(arguments)
+  stack.push(notfound)
+
+  return function (req, res) {
+    var pile = stack.slice()
+
+    var next = function () {
+      pile.shift()(req, res, next)
+    }
+
+    next()
+  }
+}
+
+var notfound = module.exports.notfound = function (req, res, next) {
   res.statusCode = 404
   res.end()
 }
-
-var blage = function (req, res) {
-  var stack = this.stack.slice()
-    
-  var next = function () {
-    stack.shift()(req, res, next)
-  }
-  
-  next()
-}
-
-module.exports = function () {
-  var self = {stack: Array.prototype.slice.call(arguments)}
-  self.stack.push(notfound)
-  return blage.bind(self)
-}
-
