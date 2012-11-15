@@ -6,10 +6,11 @@ module.exports = function () {
   stack.push(notfound)
 
   return function (req, res) {
-    var pile = stack.slice()
+    var i = -1
 
     var next = function () {
-      pile.shift()(req, res, next)
+      i += 1
+      stack[i](req, res, next)
     }
 
     next()
