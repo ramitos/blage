@@ -48,7 +48,7 @@ module.exports = function (helpers, callback) {
 }
 
 module.exports.before = function (helpers, callback) {
-  var onRequest = blage(handlers.one, handlers.two, handlers.three)
+  var onRequest = blage(blage.log, handlers.one, handlers.two, handlers.three)
   var address = require('http').createServer(onRequest).listen().address()
   helpers.address = interpolate('http://%s:%s', address.address, address.port)
   callback()
